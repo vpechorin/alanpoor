@@ -1,0 +1,375 @@
+$siteBackground: #FDFDFD;
+$bodyBackground:  #333; 
+$mainContentBackground: @siteBackground;
+$navColBackground: darken(@siteBackground, 5%);
+$textColor: #333;
+$linkColor: #666;
+$linkColorHover: darken(@linkColor, 40%);
+$logoFontSize: 24px;
+$fontSize: 14px;
+$sideMenuFontSize: 12px;
+$sidemenuRightGap: 6px;
+$borderColor: lighten(@textColor, 60%);
+$verticalBorderColor: @borderColor;
+@logoFontFamily: 'Brawler',Palatino,Lucida Grande,Helvetica,sans-serif;
+@mainFontFamily: Arial, sans-serif;
+@headingsFontFamily: @mainFontFamily;
+@logoColor: @textColor;
+@subLogoColor: #C02702;
+@siteTopGap: 20px;
+
+@subpageIndexFontSize: @sideMenuFontSize;
+@subpageIndexHeaderBg: darken(@navColBackground, 20%);
+@subpageIndexHeaderBgHover: @subpageIndexHeaderBg;
+@subpageIndexHeaderColor: #fff;
+@subpageIndexHeaderColorHover: #C02702;
+@subpageIndexItemBg: @siteBackground;
+@subpageIndexItemBgHover: darken(@subpageIndexItemBg, 10%);
+@subpageIndexGridColor: darken(@subpageIndexHeaderBg, 20%);
+
+html {
+    overflow: -moz-scrollbars-vertical; /* Firefox */
+    overflow-y: scroll;
+}
+
+html, body {
+    padding-top: 0px !important;
+    background: url("/img/noise-grey.jpg") repeat scroll 0 0 @bodyBackground;
+    font-size: @fontSize;
+    font-family: @mainFontFamily;
+    height: 100%;
+}
+
+//body {
+//    background-attachment: fixed;
+//    background-position: center top;
+//    background-repeat: repeat;
+//}
+
+body:after {
+    background: url("/img/pattern_diagonal_medium.png") repeat scroll 0 0 transparent;
+}
+
+a, a:visited { text-decoration: none; color: @linkColor; }
+a:hover { color: @linkColorHover; }
+
+p {
+    margin: 10px 10px 5px 10px;
+    font-size: @fontSize;
+}
+
+h2 {
+    font-family: @headingsFontFamily;
+    font-size: @logoFontSize;
+    color: lighten(@textColor, 20%);
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+    text-transform:uppercase;
+}
+
+h3 {
+    font-size: @fontSize + 4px;
+    font-family: @headingsFontFamily;
+    color: lighten(@textColor, 20%);
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: @headingsFontFamily;
+    font-size: @fontSize + 2px;
+    color: lighten(@textColor, 20%);
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+}
+
+#mainContainer {
+    background-image: none !important;
+    background-color: @siteBackground;
+    border: 1px solid @borderColor;
+    height: auto !important;
+    min-height: 100%;
+}
+
+#footerContainer {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-image: none !important;
+    background-color: @siteBackground;
+    border: 1px solid @borderColor;
+}
+
+.logo {
+    padding-top: @siteTopGap;
+    padding-right: (@sidemenuRightGap + 15px);
+}
+
+.logo h1 {
+    color: @logoColor;
+    font-family: @logoFontFamily;
+    font-size: @logoFontSize;
+    font-weight: normal;
+    line-height: 0.7em;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.sublogo {
+    display: block;
+    color: @subLogoColor;
+    font-size: (@logoFontSize - 10px);
+}
+
+.mainContacts {
+    padding-right: (@sidemenuRightGap + 15px);
+    color: @linkColor;
+    font-size: @sideMenuFontSize;
+    text-align: right;
+    border-bottom: 1px solid @borderColor;
+    height: 50px;
+}
+
+#navCol {
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 1px solid @verticalBorderColor;
+    height: auto;
+    min-height: 968px;
+    background-color: @navColBackground;
+}
+
+#mainContent {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+#footerContent {
+    font-size: @sideMenuFontSize;
+}
+
+#footerContentLeft {
+    text-align: left;
+}
+#footerContentCenter {
+    text-align: center;
+}
+#footerContentRight {
+    text-align: right;
+    color: lighten(@textColor, 30%);
+}
+
+#admMenu {
+    padding-left: @sidemenuRightGap;
+    padding-right: @sidemenuRightGap;
+}
+
+#admMenu a, #admMenu a:visited {
+    display: block;
+    padding-left: @sidemenuRightGap;
+    padding-right: @sidemenuRightGap;
+    height: 20px;
+    color: @subLogoColor;
+}
+
+#admMenu a:hover {
+    background-color: @linkColorHover;
+}
+
+#navMenu {
+    width: 170px;
+    float: right;
+    border: 0px solid #AAAAAA;
+    font-size: @sideMenuFontSize;
+    background-color: @navColBackground;
+    background-image: none !important;
+}
+
+.ui-widget-content, .ui-widget-header {
+    background-color: @navColBackground;
+    background-image: none !important;
+}
+
+.ui-state-active {
+    background-color: lighten(@navColBackground, 10%);
+    background-image: none !important;
+}
+
+#navMenu.ui-menu {
+    text-align: right;
+}
+
+#navMenu .ui-menu-item {
+    width: 170px;
+    margin-left: -5px;
+    position:relative;
+    z-index:1000;
+}
+
+#navMenu li ul li {
+    text-align: left;
+}
+
+.orbit-bullets {
+    padding-left: 10px;
+}
+
+.orbit-bullets li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    float: left;
+    margin-right: 6px;
+    border: solid 1px #222222;
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; 
+}
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 45px;
+    height: 45px;
+    line-height: 50px;
+    color: white;
+    text-indent: -9999px !important; }
+
+.gv_galleryWrap {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.subpageIndexSimple {
+    margin: 10px 10px;
+    font-size: @subpageIndexFontSize;
+    
+    .categoryPageHdr  {
+        display: block;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        border: solid 1px @subpageIndexGridColor;
+        color: @subpageIndexHeaderColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .categoryPageHdr a, .categoryPageHdr a:visited  {
+        display: block;
+        height: 100%;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        color: @subpageIndexHeaderColor; 
+    }
+}
+
+.subpageIndex {
+    margin: 10px 0 10px 0;
+    font-size: @subpageIndexFontSize;
+    
+    ul li ul { margin-left: 0; }
+    
+    .large-block-grid-3, 
+    .large-block-grid-4, 
+    .large-block-grid-2 {
+        background-color: lighten(@subpageIndexHeaderBg, 10%);
+        margin: 0 0;
+        border-top:  solid 1px @subpageIndexGridColor;
+    }
+    .large-block-grid-3  li, 
+    .large-block-grid-4 li, 
+    .large-block-grid-2 li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .categoryPageHdr  {
+        display: block;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        border-bottom: solid 1px @subpageIndexGridColor;
+        border-left: solid 1px @subpageIndexGridColor;
+        color: @subpageIndexHeaderColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .categoryPageHdr a, .categoryPageHdr a:visited  {
+        display: block;
+        height: 100%;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        color: @subpageIndexHeaderColor; 
+    }
+    
+    .categoryPageHdr a:hover  {
+        background-color: @subpageIndexHeaderBgHover;
+        color: @subpageIndexHeaderColorHover; 
+    }
+    
+    li.itemPageHdr {
+        display: block;
+        background-color: @subpageIndexItemBg;
+        border-left: solid 1px @subpageIndexGridColor;
+        border-bottom: solid 1px @subpageIndexGridColor;
+    }
+    
+    li.itemPageHdr a {
+        height: 100%;
+        display: block;
+        background: @subpageIndexItemBg;
+        padding: 2px 5px 2px 15px;
+    }
+    
+    li.itemPageHdr a:hover {
+        background: @subpageIndexItemBgHover;
+    }
+}
+
+.side-nav li a, .side-nav li a:visited {
+    color: @linkColor;
+    font-size: @sideMenuFontSize;
+}
+
+.side-nav li.divider {
+    border-top: 1px solid @borderColor;
+}
+
+.ui-widget {
+    font-family: @mainFontFamily;
+}
+
+.ui-menu .ui-menu-item a, .ui-menu .ui-menu-item a:visited {
+    color: @linkColor;
+    font-size: @sideMenuFontSize;
+}
+
+.srcAuthor {
+    font-size: @fontSize;
+}
+
+.pageTitle {
+    padding-top: @siteTopGap;
+}
+
+.vcard {
+    color: @textColor;
+    border: 0px solid @borderColor;
+}
+
+.breadcrumbs {
+    border-radius: 0px;
+    border: solid 0px #FFF;
+}
+
+.breadcrumbs > * {
+    font-size: @sideMenuFontSize;
+}
+
+.breadcrumbs > * a, .breadcrumbs > * span {
+    color: @linkColor;
+    text-transform: uppercase;
+}

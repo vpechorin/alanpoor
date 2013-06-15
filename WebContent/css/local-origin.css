@@ -1,0 +1,126 @@
+body {
+	padding-top: 0px !important;
+}
+
+#navCol {
+	padding-right: 0;
+	padding-left: 0;
+	
+	min-height: 100% !important;
+}
+
+#mainContent {
+	padding-left: 0;
+	padding-right: 0;
+
+}
+
+#navMenu {
+	width: 170px;
+	float: right;
+	border: 0px solid #AAAAAA;
+	font-size: 0.8em;
+}
+
+#navMenu.ui-menu {
+	text-align: right;
+}
+
+#navMenu .ui-menu-item {
+	width: 170px;
+	margin-left: -5px;
+	position:relative;
+	z-index:1000;
+}
+
+#navMenu li ul li {
+    text-align: left;
+}
+
+.orbit-bullets li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    float: left;
+    margin-right: 6px;
+    border: solid 1px #222222;
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; 
+}
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 45px;
+    height: 45px;
+    line-height: 50px;
+    color: white;
+    text-indent: -9999px !important; }
+
+.gv_galleryWrap {
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+.subpageIndex {
+	margin: 10px 0 10px 0;;
+	font-size: 0.8em;
+}
+
+.subpageIndex ul li ul {
+	margin-left: 0;
+}
+
+.large-block-grid-3 {
+	background-color: #DDD;
+	margin: 0 0;
+}
+
+.large-block-grid-3  li {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.categoryPageHdr  {
+	display: block;
+	background-color: #999;
+	padding: 2px 2px 2px 5px;
+	border-right: solid 1px #666;
+	color: #eee; 
+}
+
+.categoryPageHdr a, .categoryPageHdr a:visited  {
+    display: block;
+    height: 100%;
+    background-color: #999;
+    padding: 2px 2px 2px 5px;
+    color: #eee; 
+}
+
+.categoryPageHdr a:hover  {
+    background-color: #EEE;
+    padding: 2px 2px 2px 5px;
+    color: #eee; 
+}
+
+li.itemPageHdr {
+	display: block;
+	background-color: #EEE;
+	border-left: solid 1px #666;
+	border-bottom: solid 1px #666;
+	
+}
+
+li.itemPageHdr a {
+	height: 100%;
+    display: block;
+    background: #EEE;
+    padding: 2px 5px 2px 15px;
+}
+
+li.itemPageHdr a:hover {
+    background: #EFF;
+}

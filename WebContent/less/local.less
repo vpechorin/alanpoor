@@ -1,0 +1,430 @@
+@primaryColor: #EE6500;
+@primaryFontColor: #333;
+@headerFontColor: @primaryColor;
+@siteBackground: #FDFDFD;
+@bodyBackground:  #333;
+@white: #FFF;
+@black: #000; 
+@mainContentBackground: @siteBackground;
+@navColBackground: darken(@siteBackground, 5%);
+@textColor: @primaryFontColor;
+@linkColor: @primaryColor;
+@linkColorHover: #F78C3E;
+@logoFontSize: 24px;
+@fontSize: 14px;
+@sideMenuFontSize: 12px;
+@sidemenuRightGap: 6px;
+@sidemenuColor: #666;
+@sidemenuLinkHover: #212121;
+
+@extBorderColor: lighten(@textColor, 60%);
+@verticalBorderColor: @primaryColor;
+@internalBorderColor: @primaryColor;
+@brawlerFontFamily: 'Brawler',Palatino,Lucida Grande,Helvetica,sans-serif;
+@arialFontFamily: Arial, Helvetica, sans-serif;
+@logoFontFamily: @arialFontFamily;
+@mainFontFamily: @arialFontFamily;
+@headingsFontFamily: @mainFontFamily;
+@logoColor: @textColor;
+@subLogoColor: @textColor;
+@siteTopGap: 20px;
+
+@subpageIndexFontSize: @sideMenuFontSize;
+@subpageIndexHeaderBg: darken(@navColBackground, 20%);
+@subpageIndexHeaderBgHover: @subpageIndexHeaderBg;
+@subpageIndexHeaderColor: #fff;
+@subpageIndexHeaderColorHover: #C02702;
+@subpageIndexItemBg: @siteBackground;
+@subpageIndexItemBgHover: darken(@subpageIndexItemBg, 10%);
+@subpageIndexGridColor: darken(@subpageIndexHeaderBg, 20%);
+
+html {
+    overflow: -moz-scrollbars-vertical; /* Firefox */
+    overflow-y: scroll;
+}
+
+html, body {
+    padding-top: 0px !important;
+    background: url("/img/noise-grey.jpg") repeat scroll 0 0 @bodyBackground;
+    font-size: @fontSize;
+    font-family: @mainFontFamily;
+    height: 100%;
+}
+
+a, a:visited { text-decoration: none; color: @linkColor; }
+a:hover, a:focus { color: #F7A86F; text-decoration: underline; }
+
+p {
+    margin: 10px 10px 5px 10px;
+    font-size: @fontSize;
+}
+
+h2 {
+    font-family: @headingsFontFamily;
+    font-size: @logoFontSize;
+    color: @headerFontColor;
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+    text-transform:uppercase;
+}
+
+h3 {
+    font-size: @fontSize + 4px;
+    font-family: @headingsFontFamily;
+    color: @headerFontColor;
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: @headingsFontFamily;
+    font-size: @fontSize + 2px;
+    color: @headerFontColor;
+    margin: 0px 10px 0px 10px;
+    font-weight: normal;
+}
+
+#mainContainer {
+    background-image: none !important;
+    background-color: @siteBackground;
+    border-left: 1px solid @extBorderColor;
+    border-right: 1px solid @extBorderColor;
+    height: auto !important;
+}
+
+#footerContainer {
+    margin-top: 5px;
+    padding: 5px;
+    background-image: none !important;
+    background-color: @siteBackground;
+    border: 1px solid @extBorderColor;
+}
+
+.logoContainer {
+    border-bottom: 1px solid @white;
+    background-color: #808080;
+     
+    .logo {
+        padding-top: @siteTopGap;
+        padding-right: (@sidemenuRightGap + 15px);
+    }
+
+    .logo h1 {
+        color: @white;
+        font-family: @logoFontFamily;
+        font-size: @logoFontSize;
+        font-weight: normal;
+        line-height: 0.7em;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    
+    .sublogo {
+        display: block;
+        font-family: @logoFontFamily;
+        color: darken(@white, 10%);
+        font-size: (@logoFontSize - 10px);
+    }
+    
+    .mainContacts {
+        padding-right: (@sidemenuRightGap + 15px);
+        font-family: @logoFontFamily;
+        color: @white;
+        font-size: @sideMenuFontSize;
+        text-align: right;
+        height: 50px;
+    }
+}
+
+.logoContainerHome {
+
+    background-color: @primaryColor;
+    border-bottom: 1px solid @primaryColor;
+    
+    .logo {
+        padding-top: @siteTopGap;
+        padding-right: (@sidemenuRightGap + 15px);
+    }
+
+    .logo h1 {
+        color: @black;
+        font-family: @logoFontFamily;
+        font-size: @logoFontSize;
+        font-weight: normal;
+        line-height: 0.7em;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+    
+    .sublogo {
+        display: block;
+        font-family: @logoFontFamily;
+        color: @white;
+        font-size: (@logoFontSize - 10px);
+    }
+    
+    .mainContacts {
+        padding-right: (@sidemenuRightGap + 15px);
+        font-family: @logoFontFamily;
+        color: @black;
+        font-size: @sideMenuFontSize;
+        text-align: right;
+        height: 50px;
+    }
+}
+
+.orangeBg {
+    background-color: @primaryColor;
+    border-bottom: 1px solid @primaryColor;
+}
+
+#navCol {
+    padding-right: 0;
+    padding-left: 0;
+    border-right: 1px solid @verticalBorderColor;
+    border-bottom: 1px solid @verticalBorderColor;
+    height: auto !important;
+    min-height: 873px;
+    background-color: @navColBackground;
+}
+
+#mainContent {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    background-color: @siteBackground;
+    height: auto !important;
+    min-height: 80%;
+}
+
+#footerContent {
+    font-size: @sideMenuFontSize;
+}
+
+#footerContentLeft {
+    text-align: left;
+    color: @sidemenuColor;
+    a, a:visited { color: @sidemenuColor; }
+    a:hover { color: @sidemenuLinkHover; }
+}
+#footerContentCenter {
+    text-align: center;
+}
+#footerContentRight {
+    text-align: right;
+    color: lighten(@textColor, 30%);
+}
+
+.orbit-bullets {
+    padding-left: 10px;
+}
+
+.orbit-bullets li {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    float: left;
+    margin-right: 6px;
+    border: solid 1px #222222;
+    -webkit-border-radius: 1000px;
+    border-radius: 1000px; 
+}
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 45px;
+    height: 45px;
+    line-height: 50px;
+    color: white;
+    text-indent: -9999px !important; }
+
+.subpageIndexSimple {
+    margin: 10px 10px;
+    font-size: @subpageIndexFontSize;
+    
+    .categoryPageHdr  {
+        display: block;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        border: solid 1px @subpageIndexGridColor;
+        color: @subpageIndexHeaderColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .categoryPageHdr a, .categoryPageHdr a:visited  {
+        display: block;
+        height: 100%;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        color: @subpageIndexHeaderColor; 
+    }
+}
+
+.subpageIndex {
+    margin: 10px 0 10px 0;
+    font-size: @subpageIndexFontSize;
+    
+    ul li ul { margin-left: 0; }
+    
+    .large-block-grid-3, 
+    .large-block-grid-4, 
+    .large-block-grid-2 {
+        background-color: lighten(@subpageIndexHeaderBg, 10%);
+        margin: 0 0;
+        border-top:  solid 1px @subpageIndexGridColor;
+    }
+    .large-block-grid-3  li, 
+    .large-block-grid-4 li, 
+    .large-block-grid-2 li {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .categoryPageHdr  {
+        display: block;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        border-bottom: solid 1px @subpageIndexGridColor;
+        border-left: solid 1px @subpageIndexGridColor;
+        color: @subpageIndexHeaderColor;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .categoryPageHdr a, .categoryPageHdr a:visited  {
+        display: block;
+        height: 100%;
+        background-color: @subpageIndexHeaderBg;
+        padding: 2px 2px 2px 5px;
+        color: @subpageIndexHeaderColor; 
+    }
+    
+    .categoryPageHdr a:hover  {
+        background-color: @subpageIndexHeaderBgHover;
+        color: @subpageIndexHeaderColorHover; 
+    }
+    
+    li.itemPageHdr {
+        display: block;
+        background-color: @subpageIndexItemBg;
+        border-left: solid 1px @subpageIndexGridColor;
+        border-bottom: solid 1px @subpageIndexGridColor;
+    }
+    
+    li.itemPageHdr a {
+        height: 100%;
+        display: block;
+        background: @subpageIndexItemBg;
+        padding: 2px 5px 2px 15px;
+    }
+    
+    li.itemPageHdr a:hover {
+        background: @subpageIndexItemBgHover;
+    }
+}
+
+.side-nav li {
+    text-align: right;
+}
+
+.side-nav li a, .side-nav li a:visited {
+    color: @sidemenuColor;
+    font-size: @sideMenuFontSize;
+    border-top: 1px solid @navColBackground;
+    border-bottom: 1px solid @navColBackground;
+    padding-right: @sidemenuRightGap;
+    text-decoration: none;
+}
+
+.side-nav li.divider {
+    border-top: 1px solid @internalBorderColor;
+}
+
+.side-nav li a:hover {
+        border-top: 1px solid #999999;
+        border-bottom: 1px solid #999999;
+        background: @primaryColor url(/img/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+        font-weight: normal;
+        color: @sidemenuLinkHover;
+        text-decoration: none;
+}
+
+.srcAuthor {
+    font-size: @fontSize;
+}
+
+.pageTitle {
+    padding-top: @siteTopGap;
+}
+
+.vcard {
+    color: @textColor;
+    border: 0px solid #FFF;
+}
+
+.breadcrumbs {
+    border-radius: 0px;
+    border: solid 0px #FFF;
+}
+
+.breadcrumbs > * {
+    font-size: @sideMenuFontSize;
+    color: @sidemenuColor;
+}
+
+.breadcrumbs > * a, .breadcrumbs > * span {
+    color: @sidemenuColor;
+    text-transform: uppercase;
+}
+
+.breadcrumbs > * a:hover {
+    color: @sidemenuLinkHover;
+}
+
+.projectsBlock {
+    margin: 10px 10px;
+}
+
+.projectsH1 {
+    display: block;
+    background-color: @primaryColor;
+    padding: 2px 2px 2px 5px;
+    border: solid 0px #F7A86F;
+    color: @white;
+    font-weight: bold;
+    text-transform: uppercase;
+    a, a:visited { color: @white; }
+    a:hover { color: #F7A86F; text-decoration: none; }
+}
+
+ul.rootProjectsLevel { list-style-type: none;  }
+
+li.grpLI { margin-top: 15px;}
+
+.projectsH2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: lighten(@textColor, 20%);
+    font-weight: bold;
+    a, a:visited { color: lighten(@textColor, 20%); }
+}
+
+.pagegrid { margin-left: 18px;}
+
+.pagegrid .th {
+    min-height: 128px;
+    height: auto !important;
+}
+
+.th:hover, .th:focus {
+    -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+    box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5); 
+}
+
