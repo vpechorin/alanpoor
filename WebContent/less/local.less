@@ -1,6 +1,8 @@
 @primaryColor: #EE6500;
 @primaryFontColor: #333;
+@secondaryFontColor: #4D4D4D;
 @headerFontColor: @primaryColor;
+@greyBackground: #808080;
 @siteBackground: #FDFDFD;
 @bodyBackground:  #333;
 @white: #FFF;
@@ -96,8 +98,20 @@ h4 {
     margin-top: 5px;
     padding: 5px;
     background-image: none !important;
-    background-color: @siteBackground;
-    border: 1px solid @extBorderColor;
+    background-color1: @greyBackground;
+    border-top: 1px dotted @primaryColor;
+    color: @secondaryFontColor;
+    font-size1: 11px;
+    a, a:visited { 
+        color: @secondaryFontColor; 
+        border-bottom: 1px dotted #4D4D4D;
+        text-decoration: none;
+    }
+    a:hover {
+        color: @white;
+        border-bottom: 1px none;
+        text-decoration: none;
+    }
 }
 
 .logoContainer {
@@ -184,7 +198,6 @@ h4 {
     padding-right: 0;
     padding-left: 0;
     border-right: 1px solid @verticalBorderColor;
-    border-bottom: 1px solid @verticalBorderColor;
     height: auto !important;
     min-height: 873px;
     background-color: @navColBackground;
@@ -206,13 +219,16 @@ h4 {
 #footerContentLeft {
     text-align: left;
     color: @sidemenuColor;
-    a, a:visited { color: @sidemenuColor; }
-    a:hover { color: @sidemenuLinkHover; }
+    padding: 0;
 }
+
 #footerContentCenter {
     text-align: center;
+    padding: 0;
 }
+
 #footerContentRight {
+    padding: 0;
     text-align: right;
     color: lighten(@textColor, 30%);
 }
@@ -406,7 +422,10 @@ h4 {
 
 ul.rootProjectsLevel { list-style-type: none;  }
 
-li.grpLI { margin-top: 15px;}
+li.grpLI { 
+    margin-top: 15px;
+    ul { margin-left: 1em; }
+}
 
 .projectsH2 {
     text-transform: uppercase;
