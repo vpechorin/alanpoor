@@ -8,7 +8,7 @@
 @white: #FFF;
 @black: #000; 
 @mainContentBackground: @siteBackground;
-@navColBackground: darken(@siteBackground, 5%);
+@navColBackground: darken(@siteBackground, 10%);
 @textColor: @primaryFontColor;
 @linkColor: @primaryColor;
 @linkColorHover: #F78C3E;
@@ -63,7 +63,7 @@ p {
 
 h2 {
     font-family: @headingsFontFamily;
-    font-size: @logoFontSize;
+    font-size: @fontSize + 8px;
     color: @headerFontColor;
     margin: 0px 10px;
     font-weight: normal;
@@ -89,8 +89,8 @@ h4 {
 #mainContainer {
     background-image: none !important;
     background-color: @siteBackground;
-    border-left: 1px solid @extBorderColor;
-    border-right: 1px solid @extBorderColor;
+    border-left: 0px solid @extBorderColor;
+    border-right: 0px solid @extBorderColor;
     height: auto !important;
 }
 
@@ -199,7 +199,7 @@ h4 {
     padding-left: 0;
     border-right: 1px solid @verticalBorderColor;
     height: auto !important;
-    min-height: 873px;
+    min-height: 973px;
     background-color: @navColBackground;
 }
 
@@ -410,7 +410,7 @@ h4 {
 
 .projectsH1 {
     display: block;
-    background-color: @primaryColor;
+    background-color: @navColBackground;
     padding: 2px 2px 2px 5px;
     border: solid 0px #F7A86F;
     color: @white;
@@ -438,7 +438,7 @@ li.grpLI {
 .pagegrid { margin-left: 18px;}
 
 .pagegrid .th {
-    min-height: 128px;
+    min-height: 120px;
     height: auto !important;
 }
 
