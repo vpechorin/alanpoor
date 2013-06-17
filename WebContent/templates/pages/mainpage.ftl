@@ -62,6 +62,7 @@
     <!-- script type="text/javascript" src="${appConfig.appPath}/resources/libs/galleryview/js/jquery.easing.1.3.js"></script -->
     <!-- script type="text/javascript" src="${appConfig.appPath}/resources/libs/galleryview/js/jquery.timers-1.2.js"></script -->
     
+    <#if appConfig.lessCompiler == "on">
     <script type="text/javascript">
         less = {
             env: "development", // or "production"
@@ -74,10 +75,11 @@
             relativeUrls: false,// whether to adjust url's to be relative
                                 // if false, url's are already relative to the
                                 // entry less file
-            rootpath: ":/areeee/"// a path to add on to the start of every url resource
+            rootpath: ":/unknown/"// a path to add on to the start of every url resource
         };
     </script>
     <script src="${appConfig.appPath}/resources/libs/less/less-1.3.3.min.js"></script>
+    </#if>
     
     <@cmslib.insertPageElement thePage=txt peKey="html-header"/>
 </head>
@@ -115,7 +117,7 @@
                         </@security.authorize>
                 </div>
                 <div class="small-6 large-6 columns" id="footerContentCenter"><@cmslib.insertPageElement thePage=txt peKey="footer"/></div>
-                <div class="small-3 large-3 columns" id="footerContentRight">AreteCMS # ${appConfig["application.build"]}</div>
+                <div class="small-3 large-3 columns" id="footerContentRight"><span title="${appConfig["application.build"]}" class="poweredBy"><a href="https://github.com/vpechorin/kontempl">Powered by Kontempl</a></span></div>
             </div>
         </div>
     </div>
