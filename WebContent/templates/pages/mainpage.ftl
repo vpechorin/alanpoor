@@ -30,37 +30,21 @@
     <link href="${appConfig.appPath}/resources/libs/foundation/css/normalize.css" rel="stylesheet">
     <link href="${appConfig.appPath}/resources/libs/foundation/css/foundation.css" rel="stylesheet">
     <link href="${appConfig.appPath}/resources/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    
-    <!-- link rel="stylesheet" href="${appConfig.appPath}/resources/libs/magnific-popup/magnific-popup.css" -->
     <link rel="stylesheet" href="${appConfig.appPath}/resources/libs/swipebox/swipebox.css">
-    <!-- link rel="stylesheet" href="${appConfig.appPath}/resources/libs/galleryview/css/jquery.galleryview-3.0-dev.css" -->
-    <!-- link rel="stylesheet" href="${appConfig.appPath}/resources/libs/jquery-ui-custom/themes/smoothness/jquery-ui.css" -->
-    
-    <!-- Google Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Brawler" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="${appConfig.appPath}/resources/css/main.css">
+    <#if appConfig.lessCompiler == "on">
     <link rel="stylesheet/less" type="text/css" href="${appConfig.appPath}/less/local.less">
-    <!-- link rel="stylesheet" type="text/css" href="${appConfig.appPath}/css/local.css" -->
+    <#else>
+    <link rel="stylesheet" type="text/css" href="${appConfig.appPath}/css/local.css">
+    </#if>
     
     <#list css as file>   		
     	<style type="text/css" media="all">@import ${path}${file};</style>
     </#list>
-
-    <!-- script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script -->
     <script src="${appConfig.appPath}/resources/libs/jquery/jquery-1.10.1.min.js"></script>
-    <!-- script src="${appConfig.appPath}/resources/libs/jquery-ui-custom/js/jquery-ui-1.10.3.custom.min.js"></script -->
     <script src="${appConfig.appPath}/resources/libs/foundation/js/vendor/custom.modernizr.js"></script>
     <script src="${appConfig.appPath}/resources/libs/foundation/js/foundation.min.js"></script>
-    <!--
-    <script src="${appConfig.appPath}/resources/libs/foundation/js/foundation/foundation.orbit.js"></script>
-    -->
-    
-    <!-- script src="${appConfig.appPath}/resources/libs/magnific-popup/jquery.magnific-popup.min.js"></script -->
     <script src="${appConfig.appPath}/resources/libs/swipebox/jquery.swipebox.min.js"></script>
-    
-    <!-- script type="text/javascript" src="${appConfig.appPath}/resources/libs/galleryview/js/jquery.galleryview-3.0-dev.js"></script -->
-    <!-- script type="text/javascript" src="${appConfig.appPath}/resources/libs/galleryview/js/jquery.easing.1.3.js"></script -->
-    <!-- script type="text/javascript" src="${appConfig.appPath}/resources/libs/galleryview/js/jquery.timers-1.2.js"></script -->
     
     <#if appConfig.lessCompiler == "on">
     <script type="text/javascript">
