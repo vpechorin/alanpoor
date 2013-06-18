@@ -3,7 +3,7 @@
 <#if branch.hasChildren()>
 <div class="pageCategoryGrid">
 <#list branch.children as cat>
-<h3>${cat.data.title}</h3>
+<h3><a href="${appConfig.appPath}/pv/${cat.data.name}">${cat.data.title}</a></h3>
 <@localPageGrid branch=cat />
 </#list>
 </div>
