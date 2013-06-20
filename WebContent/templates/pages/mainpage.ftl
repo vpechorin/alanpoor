@@ -106,9 +106,9 @@
         </div>
     </div>
     
- <script>
+ <!-- script>
 $(document).foundation();
-</script>
+</script -->
 
 </body>
 </html>
