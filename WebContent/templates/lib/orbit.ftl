@@ -8,7 +8,8 @@
 <script>
 $(document).load(function() {
     $(document).foundation();
-    $(".swipebox").swipebox({hideBarsDelay : 0});
+    $(".swipebox").swipebox({hideBarsDelay : 3000});
+    <#--  dfdfd 
     <#if pause_on_start>
     $("ul.orbit-slides-container").each(function() {
         $(this).siblings('.orbit-timer').click(); //Clicks pause
@@ -20,7 +21,7 @@ $(document).load(function() {
     });
     $(".orbit-slide-number").hide();
     $(".orbit-progress").hide();
-    </#if>
+    </#if>   -->
 });
 </script>    
 </#if>
