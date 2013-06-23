@@ -7,13 +7,14 @@
 <#assign pageTitle=cmslib.getPageElementContent(txt, "sitename")>
 <#assign canonical = "http://${appConfig.domainname}${appConfig.appPath}">
 <#else>
-<#assign pageTitle=pageTitle + " - " + cmslib.getPageElementContent(txt, "sitename")>
+<#assign pageTitle=pageTitle?xhtml + " - " + cmslib.getPageElementContent(txt, "sitename")>
 </#if>
-
+<#assign metaDesc=txt.getTextDescription(300)!"">
+<#assign metaKeyw=txt.tags!"">
 <@page
     title = pageTitle
-    metaDescription = txt.getTextDescription(300)!""
-    metaKeywords = txt.tags!""
+    metaDescription = metaDesc?xhtml
+    metaKeywords = metaKeyw?xhtml
     selectedPage = txt
     canonical = canonical
     pageedit = appConfig.appPath + "/page/" + txt.id?c + "/edit"

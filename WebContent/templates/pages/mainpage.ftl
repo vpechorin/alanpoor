@@ -14,17 +14,19 @@
 <#include "/lib/ogMeta.ftl"/>
 <#assign security=JspTaglibs["http://www.springframework.org/security/tags"] />
 <!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
 <#if txt??><#else><#if homePage??><#assign txt=homePage></#if></#if>
 <#if pageName??><#else><#assign pageName="genericpage"></#if>
-<html lang="en">
-<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="${appConfig["application.name"]} ${appConfig["application.build"]}" />
     <title>${title}</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="${appConfig.appPath}/img/favicon.ico" type="image/x-icon">    
     <#if opts.canonical??><link rel="canonical" href="${opts.canonical}"></#if>
-    <#if opts.metaDescription??><meta name="description" content="${opts.metaDescription}"></#if>
-    <#if opts.metaKeywords??><meta name="keywords" content="${opts.metaKeywords}"></#if>
+    <#if opts.metaDescription??><meta name="description" content="${opts.metaDescription?html}"></#if>
+    <#if opts.metaKeywords??><meta name="keywords" content="${opts.metaKeywords?html}"></#if>
     <#if opts.ogproperties??><@ogMeta ogproperties=opts.ogproperties /></#if>
  
     <link href="${appConfig.appPath}/resources/libs/foundation/css/normalize.css" rel="stylesheet">
@@ -37,7 +39,7 @@
     <#else>
     <link rel="stylesheet" type="text/css" href="${appConfig.appPath}/css/local.css">
     </#if>
-    
+        
     <#list css as file>   		
     	<style type="text/css" media="all">@import ${path}${file};</style>
     </#list>
@@ -105,10 +107,6 @@
             </div>
         </div>
     </div>
-    
- <!-- script>
-$(document).foundation();
-</script -->
 
 </body>
 </html>
