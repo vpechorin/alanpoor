@@ -57,6 +57,12 @@ html, body {
 a, a:visited { text-decoration: none; color: @linkColor; }
 a:hover, a:focus { color: #F7A86F; text-decoration: underline; }
 
+.treeLinks {
+    a { color: lighten(@textColor, 20%); }
+    a:hover { text-decoration: underline; }
+    a:visited { text-decoration: none; color: @linkColor; }
+}
+
 p {
     margin: 10px 10px 5px 10px;
     font-size: @fontSize;
@@ -116,8 +122,10 @@ h4 {
 }
 
 .logoContainer {
-    //border-bottom: 1px solid @white;
-    //background-color: #808080;
+
+    line-height: 116px;
+    text-align: right;
+    padding-right: @navColRightGap;
      
     .logo {
         padding-top: @siteTopGap;
@@ -157,7 +165,11 @@ h4 {
 }
 
 .logoContainerHome {
-
+    
+    line-height: 116px;
+    text-align: right;
+    padding-right: @navColRightGap;
+    
     background-color: @primaryColor;
     border-bottom: 1px solid @primaryColor;
     
@@ -428,9 +440,12 @@ h4 {
 
 ul.rootProjectsLevel { list-style-type: none;  }
 
+
+
 li.grpLI { 
     margin-top: 15px;
     ul { margin-left: 1em; }
+    .treeLinks;
 }
 
 .projectsH2 {
@@ -438,19 +453,24 @@ li.grpLI {
     // text-decoration: underline;
     color: lighten(@textColor, 20%);
     font-weight: bold;
+    
     a, a:visited { color: lighten(@textColor, 20%); }
 }
 
-.pagegrid { margin-left: 18px;}
-
-.pagegrid .th {
-    min-height: 120px;
-    height: auto !important;
-}
-
-.th:hover, .th:focus {
-    -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
-    box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5); 
+.pagegrid { 
+    margin-left: 18px;
+    
+    .th {
+        min-height: 120px;
+        height: auto !important;
+    }
+    
+    .th:hover, .th:focus {
+        -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+        box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5); 
+    }
+    
+    .treeLinks;
 }
 
 table.contactUs {
@@ -468,5 +488,9 @@ table.contactUs {
 .vcard .fn {
         font-size: @fontSize;
         color: @primaryFontColor;
+}
+
+#siteindex {
+    .treeLinks;
 }
 

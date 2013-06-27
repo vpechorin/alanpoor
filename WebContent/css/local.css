@@ -20,6 +20,16 @@ a:focus {
   color: #F7A86F;
   text-decoration: underline;
 }
+.treeLinks a {
+  color: #666666;
+}
+.treeLinks a:hover {
+  text-decoration: underline;
+}
+.treeLinks a:visited {
+  text-decoration: none;
+  color: #ee6500;
+}
 p {
   margin: 10px 10px 5px 10px;
   font-size: 14px;
@@ -73,6 +83,11 @@ h4 {
   border-bottom: 1px none;
   text-decoration: none;
 }
+.logoContainer {
+  line-height: 116px;
+  text-align: right;
+  padding-right: 21px;
+}
 .logoContainer .logo {
   padding-top: 28px;
   padding-right: 21px;
@@ -103,6 +118,9 @@ h4 {
   height: 50px;
 }
 .logoContainerHome {
+  line-height: 116px;
+  text-align: right;
+  padding-right: 21px;
   background-color: #ee6500;
   border-bottom: 1px solid #ee6500;
 }
@@ -354,6 +372,16 @@ li.grpLI {
 li.grpLI ul {
   margin-left: 1em;
 }
+li.grpLI a {
+  color: #666666;
+}
+li.grpLI a:hover {
+  text-decoration: underline;
+}
+li.grpLI a:visited {
+  text-decoration: none;
+  color: #ee6500;
+}
 .projectsH2 {
   text-transform: uppercase;
   color: #666666;
@@ -370,10 +398,20 @@ li.grpLI ul {
   min-height: 120px;
   height: auto !important;
 }
-.th:hover,
-.th:focus {
+.pagegrid .th:hover,
+.pagegrid .th:focus {
   -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
   box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+}
+.pagegrid a {
+  color: #666666;
+}
+.pagegrid a:hover {
+  text-decoration: underline;
+}
+.pagegrid a:visited {
+  text-decoration: none;
+  color: #ee6500;
 }
 table.contactUs {
   border: 0px none;
@@ -389,4 +427,14 @@ table.contactUs tr td {
 .vcard .fn {
   font-size: 14px;
   color: #333333;
+}
+#siteindex a {
+  color: #666666;
+}
+#siteindex a:hover {
+  text-decoration: underline;
+}
+#siteindex a:visited {
+  text-decoration: none;
+  color: #ee6500;
 }

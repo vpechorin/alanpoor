@@ -74,10 +74,15 @@
     <@cmslib.insertPageElement thePage=txt peKey="html-body-start"/>
     <div class="row" id=mainContainer>
         <div class="small-3 large-3 columns" id=navCol>
-            <div class="<#if pageName == "home">logoContainerHome<#else>logoContainer</#if>">
-                <div class="logo"><@cmslib.insertPageElement thePage=txt peKey="logoContent"/></div>
-                <div class="mainContacts"><@cmslib.insertPageElement thePage=txt peKey="logoContacts"/></div>
-            </div>
+            <#if pageName == "home">
+                <div class="logoContainerHome">
+                    <@cmslib.insertPageElement thePage=txt peKey="logoContentHome"/>
+                </div>
+            <#else>
+                <div class="logoContainer">
+                    <@cmslib.insertPageElement thePage=txt peKey="logoContent"/>
+                </div>
+            </#if>
              
              <#if pageName == "home">
              <@cmslib.insertPageElement thePage=txt peKey="social-container"/>
