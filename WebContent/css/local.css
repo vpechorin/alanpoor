@@ -28,7 +28,7 @@ a:focus {
 }
 .treeLinks a:visited {
   text-decoration: none;
-  color: #ee6500;
+  color: #999999;
 }
 p {
   margin: 10px 10px 5px 10px;
@@ -380,7 +380,7 @@ li.grpLI a:hover {
 }
 li.grpLI a:visited {
   text-decoration: none;
-  color: #ee6500;
+  color: #999999;
 }
 .projectsH2 {
   text-transform: uppercase;
@@ -389,7 +389,7 @@ li.grpLI a:visited {
 }
 .projectsH2 a,
 .projectsH2 a:visited {
-  color: #666666;
+  color: #666666 !important;
 }
 .pagegrid {
   margin-left: 18px;
@@ -411,7 +411,7 @@ li.grpLI a:visited {
 }
 .pagegrid a:visited {
   text-decoration: none;
-  color: #ee6500;
+  color: #999999;
 }
 table.contactUs {
   border: 0px none;
@@ -436,5 +436,5 @@ table.contactUs tr td {
 }
 #siteindex a:visited {
   text-decoration: none;
-  color: #ee6500;
+  color: #999999;
 }

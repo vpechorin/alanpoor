@@ -60,7 +60,7 @@ a:hover, a:focus { color: #F7A86F; text-decoration: underline; }
 .treeLinks {
     a { color: lighten(@textColor, 20%); }
     a:hover { text-decoration: underline; }
-    a:visited { text-decoration: none; color: @linkColor; }
+    a:visited { text-decoration: none; color: lighten(@textColor, 40%); }
 }
 
 p {
@@ -440,8 +440,6 @@ h4 {
 
 ul.rootProjectsLevel { list-style-type: none;  }
 
-
-
 li.grpLI { 
     margin-top: 15px;
     ul { margin-left: 1em; }
@@ -453,8 +451,7 @@ li.grpLI {
     // text-decoration: underline;
     color: lighten(@textColor, 20%);
     font-weight: bold;
-    
-    a, a:visited { color: lighten(@textColor, 20%); }
+    a, a:visited { color: lighten(@textColor, 20%) !important; }
 }
 
 .pagegrid { 
