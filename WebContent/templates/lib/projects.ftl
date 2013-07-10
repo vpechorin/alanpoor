@@ -24,6 +24,7 @@
                     <a href="${appConfig.appPath}/pv/${grp.data.name}">${grp.data.title}</a>
                 </#if>
                 </span>
+                <#--
                 <#if grp.hasChildren()>
                     <ul>
                     <#list grp.children as project>
@@ -31,6 +32,7 @@
                     </#list>
                     </ul>
                 </#if>
+                -->
             </li>
             </#list>
         </ul>
