@@ -3,12 +3,13 @@
 @secondaryFontColor: #4D4D4D;
 @headerFontColor: @primaryColor;
 @greyBackground: #808080;
-@siteBackground: #FDFDFD;
+// @siteBackground: #FDFDFD;
+@siteBackground: #E4E4E4;
 @bodyBackground:  #333;
 @white: #FFF;
 @black: #000; 
-@mainContentBackground: @siteBackground;
-@navColBackground: darken(@siteBackground, 10%);
+@mainContentBackground: #FDFDFD;
+@navColBackground: @siteBackground;
 @textColor: @primaryFontColor;
 @linkColor: @primaryColor;
 @linkColorHover: #F78C3E;
@@ -98,6 +99,7 @@ h4 {
     background-color: @siteBackground;
     border-left: 0px solid @extBorderColor;
     border-right: 0px solid @extBorderColor;
+    min-height: 100%;
     height: auto !important;
 }
 
@@ -105,8 +107,6 @@ h4 {
     margin-top: 5px;
     padding: 5px;
     background-image: none !important;
-    background-color1: @greyBackground;
-    border-top: 1px dotted @primaryColor;
     color: @secondaryFontColor;
     font-size1: 11px;
     a, a:visited { 
@@ -215,9 +215,7 @@ h4 {
 #navCol {
     padding-right: 0;
     padding-left: 0;
-    border-right: 1px solid @verticalBorderColor;
     height: auto !important;
-    min-height: 2048px;
     background-color: @navColBackground;
 }
 
@@ -225,9 +223,10 @@ h4 {
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    background-color: @siteBackground;
+    background-color: @mainContentBackground;
     height: auto !important;
-    min-height: 80%;
+    min-height: 952px;
+    border-left: 1px solid @verticalBorderColor;
 }
 
 #footerContent {
@@ -436,6 +435,7 @@ h4 {
     text-transform: uppercase;
     a, a:visited { color: lighten(@textColor, 20%); }
     a:hover { color: #F7A86F; text-decoration: none; }
+    text-align: center;
 }
 
 ul.rootProjectsLevel { list-style-type: none;  }
@@ -470,13 +470,26 @@ li.grpLI {
     .treeLinks;
 }
 
+.projectsBlock { 
+    
+    .th {
+        height: auto !important;
+    }
+    
+    .th:hover, .th:focus {
+        -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+        box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5); 
+    }
+
+}
+
 table.contactUs {
     border: 0px none; 
     margin-left: 0px; 
     padding-left: 0px;
     tr td {
         font-size: @fontSize;
-        background-color: @siteBackground;
+        background-color: @mainContentBackground;
         color: @primaryFontColor;
         padding-left: 7px;
     }
@@ -489,5 +502,9 @@ table.contactUs {
 
 #siteindex {
     .treeLinks;
+}
+
+.projectsItem {
+    text-align: center;
 }
 

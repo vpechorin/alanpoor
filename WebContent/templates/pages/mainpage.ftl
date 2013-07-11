@@ -11,6 +11,7 @@
 <#include "/lib/pagegrid.ftl"/>
 <#include "/lib/hpagegrid.ftl"/>
 <#include "/lib/projects.ftl"/>
+<#include "/lib/projectsItem.ftl"/>
 <#include "/lib/ogMeta.ftl"/>
 <#assign security=JspTaglibs["http://www.springframework.org/security/tags"] />
 <!DOCTYPE html>

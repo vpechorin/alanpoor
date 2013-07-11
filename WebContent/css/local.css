@@ -58,17 +58,16 @@ h4 {
 }
 #mainContainer {
   background-image: none !important;
-  background-color: #fdfdfd;
+  background-color: #e4e4e4;
   border-left: 0px solid #cccccc;
   border-right: 0px solid #cccccc;
+  min-height: 100%;
   height: auto !important;
 }
 #footerContainer {
   margin-top: 5px;
   padding: 5px;
   background-image: none !important;
-  background-color1: #808080;
-  border-top: 1px dotted #ee6500;
   color: #4d4d4d;
   font-size1: 11px;
 }
@@ -160,9 +159,7 @@ h4 {
 #navCol {
   padding-right: 0;
   padding-left: 0;
-  border-right: 1px solid #ee6500;
   height: auto !important;
-  min-height: 2048px;
   background-color: #e4e4e4;
 }
 #mainContent {
@@ -171,7 +168,8 @@ h4 {
   padding-top: 0;
   background-color: #fdfdfd;
   height: auto !important;
-  min-height: 80%;
+  min-height: 952px;
+  border-left: 1px solid #ee6500;
 }
 #footerContent {
   font-size: 12px;
@@ -247,7 +245,7 @@ h4 {
 .subpageIndex .large-block-grid-3,
 .subpageIndex .large-block-grid-4,
 .subpageIndex .large-block-grid-2 {
-  background-color: #cacaca;
+  background-color: #cbcbcb;
   margin: 0 0;
   border-top: solid 1px #7e7e7e;
 }
@@ -281,18 +279,18 @@ h4 {
 }
 .subpageIndex li.itemPageHdr {
   display: block;
-  background-color: #fdfdfd;
+  background-color: #e4e4e4;
   border-left: solid 1px #7e7e7e;
   border-bottom: solid 1px #7e7e7e;
 }
 .subpageIndex li.itemPageHdr a {
   height: 100%;
   display: block;
-  background: #fdfdfd;
+  background: #e4e4e4;
   padding: 2px 5px 2px 15px;
 }
 .subpageIndex li.itemPageHdr a:hover {
-  background: #e4e4e4;
+  background: #cbcbcb;
 }
 .side-nav li {
   text-align: right;
@@ -354,6 +352,7 @@ h4 {
   color: #666666;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 .projectsH1 a,
 .projectsH1 a:visited {
@@ -413,6 +412,14 @@ li.grpLI a:visited {
   text-decoration: none;
   color: #999999;
 }
+.projectsBlock .th {
+  height: auto !important;
+}
+.projectsBlock .th:hover,
+.projectsBlock .th:focus {
+  -webkit-box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+  box-shadow: 0 0 6px 1px rgba(238, 101, 0, 0.5);
+}
 table.contactUs {
   border: 0px none;
   margin-left: 0px;
@@ -437,4 +444,7 @@ table.contactUs tr td {
 #siteindex a:visited {
   text-decoration: none;
   color: #999999;
+}
+.projectsItem {
+  text-align: center;
 }
