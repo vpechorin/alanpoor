@@ -159,15 +159,13 @@ h4 {
 #navCol {
   padding-right: 0;
   padding-left: 0;
-  height: auto !important;
   background-color: #e4e4e4;
 }
 #mainContent {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  background-color: #fdfdfd;
-  height: auto !important;
+  background-color: #ffffff;
   min-height: 952px;
   border-left: 1px solid #ee6500;
 }
@@ -427,7 +425,7 @@ table.contactUs {
 }
 table.contactUs tr td {
   font-size: 14px;
-  background-color: #fdfdfd;
+  background-color: #ffffff;
   color: #333333;
   padding-left: 7px;
 }

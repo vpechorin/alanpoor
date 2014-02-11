@@ -44,10 +44,11 @@
     <#list css as file>   		
     	<style type="text/css" media="all">@import ${path}${file};</style>
     </#list>
-    <script src="${appConfig.appPath}/resources/libs/jquery/jquery-1.10.1.min.js"></script>
+    <script src="${appConfig.appPath}/resources/libs/jquery/jquery-1.11.0.min.js"></script>
     <script src="${appConfig.appPath}/resources/libs/foundation/js/vendor/custom.modernizr.js"></script>
     <script src="${appConfig.appPath}/resources/libs/foundation/js/foundation.min.js"></script>
     <script src="${appConfig.appPath}/resources/libs/swipebox/jquery.swipebox.min.js"></script>
+
     
     <#if appConfig.lessCompiler == "on">
     <script type="text/javascript">
@@ -67,7 +68,14 @@
     </script>
     <script src="${appConfig.appPath}/resources/libs/less/less-1.3.3.min.js"></script>
     </#if>
-    
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		var h = $("#mainContainer").innerHeight();
+    		if (h < 952) h = 952;
+    		$("#mainContent").height(h);
+    		$("#navCol").height(h);
+		});
+	</script>
     <@cmslib.insertPageElement thePage=txt peKey="html-header"/>
 </head>
 
